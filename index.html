@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      DENWIN LSD | Ruaka Local Services Directory (WhatsApp Booking)
+    </title>
+    <meta
+      name="description"
+      content="Find trusted local service providers in Ruaka. Browse plumbers, electricians, cleaners, tutors, beauty pros and more. Book instantly via WhatsApp."
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="DENWIN LSD | Ruaka Local Services Directory (WhatsApp Booking)"
+    />
+    <meta
+      property="og:description"
+      content="Find trusted local service providers in Ruaka. Browse plumbers, electricians, cleaners, tutors, beauty pros and more. Book instantly via WhatsApp."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Fonts (Google Fonts: Inter + Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 1. Navigation -->
+    <nav class="navbar">
+      <div class="container nav-content">
+        <div class="logo">DENWIN LSD</div>
+        <div class="nav-actions">
+          <a href="#get-listed" class="btn btn-outline small">Get Listed</a>
+          <a
+            href="https://wa.me/254758596269"
+            target="_blank"
+            class="btn btn-ghost small desktop-only"
+            >WhatsApp Admin</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- 2. Hero + Search -->
+    <header class="hero">
+      <div class="container hero-content">
+        <h1>Find Trusted Local Services in Ruaka</h1>
+        <p class="subtext">
+          Plumbers, electricians, cleaners, tutors, beauty pros & tech support —
+          chat and book instantly on WhatsApp.
+        </p>
+
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search plumber, cleaner, electrician, barber…"
+          />
+        </div>
+
+        <div class="toggles">
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleVerified" />
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">✅ Verified only</span>
+          </label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleAvailability" />
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">⚡ Available today</span>
+          </label>
+        </div>
+
+        <p class="trust-note">
+          Tip: Verified providers have a badge. Response times are estimates.
+        </p>
+      </div>
+    </header>
+
+    <!-- 3. Categories (Chips) -->
+    <section class="categories sticky-bar">
+      <div class="container">
+        <div class="chips-wrapper" id="categoryContainer">
+          <!-- Chips injected via JS -->
+          <button class="chip active" data-category="All">All</button>
+          <button class="chip" data-category="Plumbing">Plumbing</button>
+          <button class="chip" data-category="Electrical">Electrical</button>
+          <button class="chip" data-category="Cleaning">Cleaning</button>
+          <button class="chip" data-category="Beauty & Grooming">
+            Beauty & Grooming
+          </button>
+          <button class="chip" data-category="IT & Tech">IT & Tech</button>
+          <button class="chip" data-category="Tutoring">Tutoring</button>
+          <button class="chip" data-category="Moving">Moving</button>
+          <button class="chip" data-category="Laundry">Laundry</button>
+          <button class="chip" data-category="Painting">Painting</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Results Bar -->
+    <section class="results-bar">
+      <div class="container bar-content">
+        <div id="resultsCount">Showing 0 providers</div>
+        <div class="active-filters" id="activeFilters">
+          <!-- Active chips show here -->
+        </div>
+        <button id="clearFiltersBtn" class="clear-btn" style="display: none">
+          Clear filters
+        </button>
+      </div>
+    </section>
+
+    <!-- 5. Listings Grid -->
+    <section class="listings">
+      <div class="container">
+        <h2 class="section-title">Providers Near You</h2>
+        <div id="providersGrid" class="grid-container">
+          <!-- Cards injected via JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state hidden">
+          <p>No providers found. Try another search or clear filters.</p>
+          <button id="emptyClearBtn" class="btn btn-outline">
+            Clear filters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. How It Works -->
+    <section class="how-it-works">
+      <div class="container">
+        <h2 class="section-title center">How It Works</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <h3>Search</h3>
+            <p>Search or pick a category to find what you need.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <h3>Choose</h3>
+            <p>Browse profiles and prices of providers near you.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <h3>Chat</h3>
+            <p>Tap WhatsApp to book or ask questions instantly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Get Listed CTA -->
+    <section id="get-listed" class="cta-section">
+      <div class="container cta-content">
+        <h2>Are you a service provider in Ruaka?</h2>
+        <p>
+          Get customers through WhatsApp leads. Featured & verified spots
+          available.
+        </p>
+        <a
+          href="https://wa.me/254758596269?text=Hi%2C%20I%20want%20to%20list%20my%20business%20on%20DENWIN%20LSD.%0AName%3A%0ACategory%3A%0ALocation%3A%0APrice%20range%3A%0AWhatsApp%20number%3A"
+          target="_blank"
+          class="btn btn-primary large"
+          >Get Listed on WhatsApp</a
+        >
+      </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h4>Do you charge users?</h4>
+            <p>No, browsing is free.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Are providers verified?</h4>
+            <p>Some are verified. Verified listings have a badge.</p>
+          </div>
+          <div class="faq-item">
+            <h4>How do I book?</h4>
+            <p>Tap WhatsApp to message the provider directly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>
+            <strong>Coverage:</strong> Ruaka + nearby (Two Rivers, Runda, Kiambu
+            Road)
+          </p>
+          <p><strong>Admin WhatsApp:</strong> 0758 596 269</p>
+          <p class="disclaimer">
+            Disclaimer: Providers are independent businesses. Verify details
+            before payment.
+          </p>
+        </div>
+        <div class="copyright">
+          <p>Last updated: January 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

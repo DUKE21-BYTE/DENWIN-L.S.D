@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://denwin-lsd.vercel.app/sitemap.xml

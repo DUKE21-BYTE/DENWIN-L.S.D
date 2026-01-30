@@ -3,24 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Metrics -->
     <title>
-      DENWIN LSD | Ruaka Local Services Directory (WhatsApp Booking)
+      DENWIN LSD | Ruaka Local Services Directory - Plumbers, Cleaners, & Beauty
     </title>
     <meta
       name="description"
-      content="Find trusted local service providers in Ruaka. Browse plumbers, electricians, cleaners, tutors, beauty pros and more. Book instantly via WhatsApp."
+      content="Find trusted service providers in Ruaka, Two Rivers, and Kiambu Road. Instant WhatsApp booking for plumbers, electricians, house cleaning, movers, tutors, and salons near you."
     />
+    <meta
+      name="keywords"
+      content="Ruaka plumbing, electricians Ruaka, house help Ruaka, cleaning services Kiambu Road, movers in Ruaka, beauty salon Ruaka, laptop repair, tutors Runda, fundi near me, DENWIN LSD"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://denwin-lsd.vercel.app/" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://denwin-lsd.vercel.app/" />
     <meta
       property="og:title"
-      content="DENWIN LSD | Ruaka Local Services Directory (WhatsApp Booking)"
+      content="DENWIN LSD | Best Local Services in Ruaka & Kiambu"
     />
     <meta
       property="og:description"
-      content="Find trusted local service providers in Ruaka. Browse plumbers, electricians, cleaners, tutors, beauty pros and more. Book instantly via WhatsApp."
+      content="Connect with verified local pros in Ruaka. From emergency plumbing to beauty services. Chat & book via WhatsApp instantly."
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/hero-bg.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="DENWIN LSD | Ruaka Local Services Directory"
+    />
+    <meta
+      property="twitter:description"
+      content="Find trusted service providers in Ruaka. Book plumbers, cleaners, and more via WhatsApp."
+    />
+    <meta property="twitter:image" content="assets/hero-bg.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "DENWIN LSD",
+        "url": "https://denwin-lsd.vercel.app/",
+        "description": "Directory for local service providers in Ruaka and Kiambu Road.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://denwin-lsd.vercel.app/?search={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
@@ -54,10 +92,10 @@
     <!-- 2. Hero + Search -->
     <header class="hero">
       <div class="container hero-content">
-        <h1>Find Trusted Local Services in Ruaka</h1>
+        <h1>Find Trusted Fundis & Services in Ruaka</h1>
         <p class="subtext">
-          Plumbers, electricians, cleaners, tutors, beauty pros & tech support —
-          chat and book instantly on WhatsApp.
+          Browse top-rated <strong>plumbers, electricians, cleaners, tutors, and beauty pros</strong> in Ruaka, Two Rivers & Kiambu Road.
+          Chat and book instantly on WhatsApp.
         </p>
 
         <div class="search-box">
@@ -65,6 +103,7 @@
             type="text"
             id="searchInput"
             placeholder="Search plumber, cleaner, electrician, barber…"
+            aria-label="Search for services"
           />
         </div>
 

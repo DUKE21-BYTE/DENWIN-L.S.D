@@ -165,9 +165,13 @@ button {
    4. HERO & SEARCH
    ========================================= */
 .hero {
-  padding: 40px 0 20px;
+  padding: 80px 0 60px;
   text-align: center;
-  background: linear-gradient(135deg, #e0f2f1 0%, #ffffff 100%);
+  background: linear-gradient(135deg, rgba(224, 242, 241, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%),
+    url('assets/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero h1 {
@@ -283,6 +287,9 @@ button {
 }
 
 .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
   white-space: nowrap;
   background: #fff;
   border: 1px solid var(--border-light);
@@ -303,6 +310,11 @@ button {
   background: var(--primary);
   color: #fff;
   border-color: var(--primary);
+}
+
+.chip svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* =========================================
@@ -398,6 +410,15 @@ button {
   background: #f3f4f6;
   padding: 4px 8px;
   border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.category-badge svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.5;
 }
 
 .location-badge {
